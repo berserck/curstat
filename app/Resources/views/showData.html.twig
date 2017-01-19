@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Curency correlation: Raw data {% endblock %}
+
+{% block nav_class_data %} active {% endblock %}
+
+{% block body %}
+
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <h1>Raw Data</h1>
+            <div class="panel panel-default" >
+                <div class="panel-body">
+                <pre style="word-wrap: break-word;">{{ resp_json }}</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -9,15 +9,16 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AboutController
+class AboutController extends Controller
 {
 
     /**
-     * @Route("/about")
+     * @Route("/about",  name="about")
      */
     public function showAbout(){
-        return new Response('Hello world!');
+        return $this->render('about.html.twig', array(
+        ));
     }
 }

@@ -10,7 +10,6 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 
 class CorrelationController extends Controller
@@ -20,11 +19,9 @@ class CorrelationController extends Controller
      */
     public function showCorrelation($date)
     {
-        $templating = $this->container->get('templating');
-        $html = $templating->render('correlation/show.html.twig', array(
+        return $this->render('correlation/show.html.twig', array(
             'date' => $date
         ));
-        return new Response($html);
     }
 
 }
