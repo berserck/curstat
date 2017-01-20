@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Curency correlation: About {% endblock %}
+{% block title %} Currency statistics: About {% endblock %}
 
 {% block nav_class_about %} active {% endblock %}
 
@@ -14,6 +14,8 @@
                 <div class="panel-body">
                     <p>This is a small application that will query the api <a href="http://api.fixer.io">api.fixer.io</a> for
                         the Forex rates and do some data manipulation with it.</p>
+                    <p>It will get the Forex rates for the 5 last weekdays. and Claculate the Min, Max and Average value for these 5 days. </p>
+                    <p> Currently we that EUR as the base currency, so all the rayes are related to EUR.</p>
                 </div>
             </div>
         </div>

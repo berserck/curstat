@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Currency Statistics {% endblock %}
+
+{% block nav_class_home %} active {% endblock %}
+
+{% block body %}
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <h1>Results for date {{ "now"|date("Y-m-d") }} </h1>
+            <h2>Reference currency: {{ base }} </h2>
+
+
+            <div class="panel panel-primary" >
+                <div class="panel-heading">
+                    <h3 class="panel-title">Basic Statistics</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Currency</th><th>Max</th><th>Min</th><th>Average</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for currency, stat in stats %}
+                            <tr>
+                                <th>{{ currency }}</th>
+                                <td>{{ stat.max }}</td>
+                                <td>{{ stat.min }}</td>
+                                <td>{{ stat.avg }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <h3 class="panel-title">Data</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Currency</th>
+                            {% for date in dates %}
+                                <th>{{ date }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                        {% for currency, rate in rates %}
+                            <tr>
+                                <th> {{ currency }}</th>
+                                {% for val in rate %}
+                                    <td>{{ val }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+{% endblock %}
