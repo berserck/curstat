@@ -8,17 +8,35 @@
 
 
     <div class="row row-content">
-        <div class="col-xs-12 col-sm-12 col-lg-12">
-            <h1>About</h1>
+        <div class="col-xs-12 col-lg-10">
+            <h1>Description</h1>
             <div class="panel panel-default" >
                 <div class="panel-body">
-                    <p>This is a small application that will query the api <a href="http://api.fixer.io">api.fixer.io</a> for
+                    <p>This is a small application that will query the api <a href="http://fixer.io/">api.fixer.io</a> for
                         the Forex rates and do some data manipulation with it.</p>
-                    <p>It will get the Forex rates for the 5 last weekdays. and Claculate the Min, Max and Average value for these 5 days. </p>
+                    <p>It will get the Forex rates for the 5 last weekdays. and Calculate the Min, Max and Average value for these 5 days. </p>
                     <p> Currently we that EUR as the base currency, so all the rayes are related to EUR.</p>
+                    <p>The calculations are done for the currencies: <code>CHF</code>, <code>GBP</code>, <code>JPY</code> and <code>USD</code>.</p>
                 </div>
             </div>
         </div>
 
+        <div class="col-xs-12  col-lg-10">
+            <h1>API</h1>
+            <div class="panel panel-default" >
+                <div class="panel-body">
+                    <p>There is also a small REST API implemented with two endpoints:</p>
+                    <ul>
+                        <li>
+                            <a href="{{ path('all_stats') }}">{{ url('all_stats') }}</a> <p>This will get the statistics for all currencies</p>
+                        </li>
+                        <li>
+                            <a href="{{ path('currency_stats', {'cur':  'CUR'} ) }}">{{ url('currency_stats',  {'cur': 'CUR'}) }}</a>
+                            <p>This will get the statistics for currency <code>CUR</code>.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
