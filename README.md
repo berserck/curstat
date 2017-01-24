@@ -10,7 +10,8 @@ Currently we that EUR as the base currency, so all the rayes are related to EUR.
 The calculations are done for the currencies: <code>CHF</code>, <code>GBP</code>,
  <code>JPY</code> and <code>USD</code>.</p>
  
- ## Install instructions
+<h2>Install instructions</h2>
+
  To install the application, you need to :
  1. Clone the repository: `git clone https://github.com/berserck/curstat.git`
  2. Download Symphony: ` curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony`
