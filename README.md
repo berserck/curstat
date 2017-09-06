@@ -25,5 +25,6 @@ The calculations are done for the currencies: <code>CHF</code>, <code>GBP</code>
  8. If you added a new virtual server, don't forget to enable ist with: `a2ensite <newsite>`
  
  
- 
+# License
+Released under MIT License 
 
